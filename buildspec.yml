@@ -1,0 +1,21 @@
+{
+  "taskDefinition": {
+    "family": "pixelcurio-web-app",
+    "containerDefinitions": [
+      {
+        "name": "pixelcurio-web-app",
+        "image": "480902161190.dkr.ecr.us-west-2.amazonaws.com/pixelcurio-web-app",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ],
+        "memory": 128,
+        "essential": true
+      }
+    ]
+  }
+}
