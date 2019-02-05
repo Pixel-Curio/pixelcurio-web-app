@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('Hello world from a Node.js app! But with an update!')
+    res.send('Hello world from a Node.js app! But with an even more updated update.')
 })
 
 app.listen(3000, () => {
