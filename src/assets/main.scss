@@ -1,3 +1,11 @@
-$primary: rgb(86, 86, 139);
+$primary: rgb(0,0,0);
 
 @import "~bulma/bulma";
+
+html {
+    overflow-y: scroll;
+}
+
+.full-height{
+    height: 101vh;
+}
