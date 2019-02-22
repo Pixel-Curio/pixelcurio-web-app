@@ -81,6 +81,11 @@ export default {
     logo: './img/logo-rough.png',
     links: [
       {
+        to: '/home',
+        icon: 'mdi-home-outline',
+        text: ''
+      },
+      {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
         text: ''
@@ -164,6 +169,10 @@ export default {
       &--linkedin {
         margin-bottom: 17px;
       }
+    }
+
+    .v-list__tile--active{
+      background: var(--v-primary-base) !important;
     }
 
     .v-image__image--contain {
