@@ -1,16 +1,20 @@
 <template>
-  <div id="app">
-    <Portfolio />
-  </div>
+  <v-app>
+    <core-filter />
+
+    <core-toolbar />
+
+    <core-drawer />
+
+    <core-view />
+  </v-app>
 </template>
 
-<script>
-import Portfolio from './components/Portfolio.vue'
+<style lang="scss">
+@import '@/styles/index.scss';
 
-export default {
-  name: 'app',
-  components: {
-    Portfolio
-  }
+/* Remove in 1.2 */
+.v-datatable thead th.column.sortable i {
+  vertical-align: unset;
 }
-</script>
+</style>
