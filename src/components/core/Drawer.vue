@@ -29,10 +29,8 @@
             />
           </v-list-tile-avatar>
           <v-list-tile-title class="title">
-            
           </v-list-tile-title>
         </v-list-tile>
-        <v-divider/>
         <v-list-tile
           v-for="(link, i) in links"
           :key="i"
@@ -49,10 +47,18 @@
           />
         </v-list-tile>
         <v-list-tile
-          disabled
           active-class="primary"
-          class="v-list-item v-list__tile--buy"
-          to="/upgrade"
+          class="v-list-item v-list__tile--twitter"
+          href="https://twitter.com/pixel_curio"
+        >
+          <v-list-tile-action>
+            <v-icon>mdi-twitter-box</v-icon>
+          </v-list-tile-action>
+        </v-list-tile>
+        <v-list-tile
+          active-class="primary"
+          class="v-list-item v-list__tile--linkedin"
+          href="https://www.linkedin.com/in/pixelcurio/"
         >
           <v-list-tile-action>
             <v-icon>mdi-linkedin</v-icon>
@@ -150,9 +156,12 @@ export default {
   #app-drawer {
     .v-list__tile {
       border-radius: 4px;
-
-      &--buy {
+      
+      &--twitter {
         margin-top: auto;
+      }
+
+      &--linkedin {
         margin-bottom: 17px;
       }
     }
