@@ -18,7 +18,7 @@
         tag="v-list"
         column
       >
-        <v-list-tile avatar>
+        <v-list-tile to="/" avatar>
           <v-list-tile-avatar
             color="white"
           >
