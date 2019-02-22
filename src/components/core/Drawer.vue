@@ -31,6 +31,7 @@
           <v-list-tile-title class="title">
           </v-list-tile-title>
         </v-list-tile>
+      
         <v-list-tile
           v-for="(link, i) in links"
           :key="i"
@@ -46,6 +47,7 @@
             v-text="link.text"
           />
         </v-list-tile>
+
         <v-list-tile
           active-class="primary"
           class="v-list-item v-list__tile--twitter"
@@ -55,6 +57,7 @@
             <v-icon>mdi-twitter-box</v-icon>
           </v-list-tile-action>
         </v-list-tile>
+
         <v-list-tile
           active-class="primary"
           class="v-list-item v-list__tile--linkedin"
