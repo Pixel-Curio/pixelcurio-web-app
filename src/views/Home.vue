@@ -1,26 +1,12 @@
 <template>
   <v-container fill-height fluid grid-list-xl>
-    <v-layout wrap>
-        <v-flex lg12>
-        <material-card
-          color="primary"
-          title="This is Primary"
-          text="Created with love in Portland, OR."
-        ></material-card>
+    <v-layout wrap justify-center>
+      <v-flex lg7 md7 sm7 xs7>
+        <v-img :src="logo" contain="true" height="300px"></v-img>
       </v-flex>
-      <v-flex lg6>
-        <material-card
-          color="primary"
-          title="This is Primary"
-          text="Created with love in Portland, OR."
-        ></material-card>
-      </v-flex>
-      <v-flex lg6>
-        <material-card
-          color="secondary"
-          title="This is Secondary"
-          text="Created with love in Portland, OR."
-        ></material-card>
+      <v-flex lg7 md7 sm7 xs7>
+        <h2 align-center>Oh hey, I didn't see you there.</h2>
+        <h3>Thanks for coming to my site. If you came to checkout my writing, you should checkout my <a>Medium</a> profile. Want to see some some cool stuff I've made? Check my <a>Portfolio</a> out here. Want to see the who/what/when of my work history? Well we have a classic <a>resume</a> this way. Want to just say hi? Well then here's my </h3>
       </v-flex>
     </v-layout>
   </v-container>
@@ -28,9 +14,14 @@
 
 <script>
 export default {
-  data: () => ({})
+  data: () => ({
+    logo: './img/pc_logo_color.png'
+  })
 };
 </script>
 
 <style>
+h2{
+    text-align: center;
+}
 </style>

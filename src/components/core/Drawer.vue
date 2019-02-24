@@ -25,6 +25,7 @@
             <v-img
               :src="logo"
               height="50"
+              margin-top="100"
               contain
             />
           </v-list-tile-avatar>
@@ -81,7 +82,7 @@ import {
 
 export default {
   data: () => ({
-    logo: './img/logo-rough.png',
+    logo: './img/pc_icon_color.png',
     links: [
       {
         to: '/home',
