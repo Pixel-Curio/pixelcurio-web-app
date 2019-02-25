@@ -90,6 +90,11 @@ export default {
         text: ''
       },
       {
+        to: '/portfolio',
+        icon: 'mdi-folder-open',
+        text: ''
+      },
+      {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
         text: ''

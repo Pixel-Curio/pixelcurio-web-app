@@ -28,9 +28,8 @@ export default {
   data: () => ({
     links: [
       { name: 'Home', Link: '/home' },
-      { name: 'Writing', Link: '' },
-      { name: 'Portfolio', Link: '' },
-      { name: 'About', Link: '' }
+      { name: 'Writing', Link: 'https://medium.com/@pixelcurio' },
+      { name: 'Portfolio', Link: '/Portfolio' }
     ]
   })
 }
