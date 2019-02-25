@@ -103,7 +103,7 @@
 export default {
   data: () => ({
     no_image: "./img/portfolio/no-image.png",
-    sf_fishing: "./img/portfolio/sf-fishing.jpg",
+    sf_fishing: "./img/portfolio/fishing.jpg",
     sap_cube: "./img/portfolio/sap-cube.png",
     thermosphere: "./img/portfolio/thermosphere.jpg",
     block_busters: "./img/portfolio/block-busters.gif"
