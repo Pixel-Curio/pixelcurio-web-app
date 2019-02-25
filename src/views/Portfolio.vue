@@ -102,11 +102,11 @@
 <script>
 export default {
   data: () => ({
-    no_image: "./img/Portfolio/no-image.png",
-    sf_fishing: "./img/Portfolio/sf-fishing.jpg",
-    sap_cube: "./img/Portfolio/sap-cube.png",
-    thermosphere: "./img/Portfolio/thermosphere.jpg",
-    block_busters: "./img/Portfolio/block-busters.gif"
+    no_image: "./img/portfolio/no-image.png",
+    sf_fishing: "./img/portfolio/sf-fishing.jpg",
+    sap_cube: "./img/portfolio/sap-cube.png",
+    thermosphere: "./img/portfolio/thermosphere.jpg",
+    block_busters: "./img/portfolio/block-busters.gif"
   })
 };
 </script>
