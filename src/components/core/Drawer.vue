@@ -93,41 +93,6 @@ export default {
         to: '/portfolio',
         icon: 'mdi-folder-open',
         text: ''
-      },
-      {
-        to: '/dashboard',
-        icon: 'mdi-view-dashboard',
-        text: ''
-      },
-      {
-        to: '/user-profile',
-        icon: 'mdi-account',
-        text: ''
-      },
-      {
-        to: '/table-list',
-        icon: 'mdi-clipboard-outline',
-        text: ''
-      },
-      {
-        to: '/typography',
-        icon: 'mdi-format-font',
-        text: ''
-      },
-      {
-        to: '/icons',
-        icon: 'mdi-chart-bubble',
-        text: ''
-      },
-      {
-        to: '/maps',
-        icon: 'mdi-map-marker',
-        text: ''
-      },
-      {
-        to: '/notifications',
-        icon: 'mdi-bell',
-        text: ''
       }
     ],
     responsive: false
