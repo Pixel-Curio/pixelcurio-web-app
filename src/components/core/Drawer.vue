@@ -93,6 +93,11 @@ export default {
         to: '/portfolio',
         icon: 'mdi-folder-open',
         text: ''
+      },
+      {
+        to: '/resume',
+        icon: 'mdi-file-document',
+        text: ''
       }
     ],
     responsive: false

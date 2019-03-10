@@ -15,6 +15,11 @@ export default [
     view: 'Portfolio'
   },
   {
+    path: '/resume',
+    name: 'Resume',
+    view: 'Resume'
+  },
+  {
     path: '/dashboard',
     view: 'Dashboard'
   },
