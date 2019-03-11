@@ -29,7 +29,8 @@ export default {
     links: [
       { name: 'Home', Link: '/home' },
       { name: 'Writing', Link: 'https://medium.com/@pixelcurio' },
-      { name: 'Portfolio', Link: '/Portfolio' }
+      { name: 'Portfolio', Link: '/Portfolio' },
+      { name: 'Resume', Link: '/Resume' }
     ]
   })
 }

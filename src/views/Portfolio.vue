@@ -4,15 +4,14 @@
       <v-timeline>
         <v-timeline-item v-for="(item, i) in portfolio_items" :key="i" color="red lighten-2" small>
           <template v-slot:opposite>
-            <span>{{ item.date }}</span>
+            <span v-html="item.desc"></span>
           </template>
           <v-card>
-            <v-img :src="item.img" class="white--text" height="200px"></v-img>
+            <v-img :src="item.img" class="white--text"></v-img>
             <v-card-title>
               <div>
                 <span class="grey--text">{{ item.title }}</span>
-                <h6>{{ item.role }}</h6>
-                <p v-html="item.desc"></p>
+                <h6>{{ item.role }} - {{ item.date }}</h6>
               </div>
             </v-card-title>
           </v-card>
@@ -43,8 +42,16 @@ export default {
           "Developed a multiplayer fishing experience where guests could use phones mounted to a fishing poles to control the on-screen fishing poles. Scores were saved to a daily leaderboard so guests could compete to be the best virtual fisher."
       },
       {
+        img: "./img/portfolio/splunk-day2.gif",
+        title: "Splunk - Day 2",
+        role: "Lead Developer",
+        date: "2018",
+        desc:
+          ""
+      },
+      {
         img: "./img/portfolio/splunk.jpg",
-        title: "Splunk",
+        title: "Splunk - Day 1",
         role: "Lead Developer",
         date: "2018",
         desc:
@@ -75,8 +82,8 @@ export default {
           "Developed a 52 screen interactive 'cube' for SAP that allowed guests to search through the history of the 49ers with video clips and images from the entire history of the franchise. 16 of the screens were translucent, allowing guests to see into the cube and the 4 internal screens."
       },
       {
-        img: "./img/portfolio/",
-        title: "Virtual Board",
+        img: "./img/portfolio/warbler.gif",
+        title: "Warbler",
         role: "Lead Developer",
         date: "2017",
         desc:
@@ -107,12 +114,12 @@ export default {
           "Created an arduino based LED control system for Nike's flagship NYC store to celebrate the launch of their Thermasphere clothing tech. Created the lighting patterns for the LEDs and exposed variables for the sequences that could be modified from a DMX control board."
       },
       {
-        img: "./img/portfolio/rogue-mechs.mp4",
+        img: "./img/portfolio/rogue-mechs.gif",
         title: "Rogue Mechs",
         role: "Lead Developer",
         date: "2015",
         desc:
-          ""
+          "Developed a multiplayer Smash Brothers clone in just over a week for <a href='https://pigsquad.com/'>PIGSquad's</a> Summer Slow Jam. Due to time restrictions, relied on a custom physics driven animation system for all character animations."
       },
       {
         img: "./img/portfolio/microbiome.jpg",
@@ -123,7 +130,7 @@ export default {
           ""
       },
       {
-        img: "./img/portfolio/",
+        img: "./img/portfolio/coke.gif",
         title: "Coca-Cola Happy Cycle",
         role: "Support Developer",
         date: "2014",
