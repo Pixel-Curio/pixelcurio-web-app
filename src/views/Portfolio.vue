@@ -1,112 +1,136 @@
 <template>
-  <v-container fill-height fluid grid-list-xl>
-    <v-layout wrap>
-      <v-flex lg6 md6 sm12>
-        <v-card>
-          <v-img :src="sf_fishing" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">State Farm Fishing</span>
-              <h6>Lead Developer - 2019</h6>
-              <p>
-                Developed a multiplayer fishing experience where guests could use phones mounted to a fishing poles
-                to control the on-screen fishing poles. Scores were saved to a daily leaderboard so guests could compete
-                to be the best virtual fisher.
-              </p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex lg6 md6 sm12>
-        <v-card>
-          <v-img :src="no_image" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">Splunk .conf18</span>
-              <h6>Lead Developer (Main Visiualization) - 2018</h6>
-              <p></p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex lg4 md6 sm12>
-        <v-card>
-          <v-img :src="block_busters" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">Block Buster (Global Game Jam 2019)</span>
-              <h6>Support Developer - 2019</h6>
-              <p>
-                5 person, VR, asymmetrical, driving, territory control game. With so many buzz words, you'd think we were making
-                this one up, but it in fact exists and you can actually download it
-                <a
-                  href="https://globalgamejam.org/2019/games/blockbusters"
-                >on the GGJ website.</a>
-              </p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex lg4 md6 sm12>
-        <v-card>
-          <v-img :src="no_image" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">Warbler</span>
-              <h6>Lead Developer - 2017</h6>
-              <p>
-                VR hoverboarding game developed for internal use and exploration. Utilized a physical board that allowed the
-                player to control the virtual hoverboard with a real world item. Networking components and the gyroscopic
-                portion of the project was not developed by Pixel-Cur.io.
-              </p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex lg4 md6 sm12>
-        <v-card>
-          <v-img :src="sap_cube" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">SAP Cube</span>
-              <h6>Lead Developer - 2017</h6>
-              <p>
-                Developed a 52 screen interactive "cube" for SAP that allowed guests to search through the history of the
-                49ers with video clips and images from the entire history of the franchise. 16 of the screens were
-                translucent, allowing guests to see into the cube and the 4 internal screens.
-              </p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-      <v-flex lg4 md6 sm12>
-        <v-card>
-          <v-img :src="thermosphere" class="white--text" height="300px"></v-img>
-          <v-card-title>
-            <div>
-              <span class="grey--text">Nike Thermasphere</span>
-              <h6>Support Developer - 2015</h6>
-              <p>
-                Created an arduino based LED control system for Nike's flagship NYC store to celebrate the launch of their
-                Thermasphere clothing tech. Created the lighting patterns for the LEDs and exposed variables for the sequences
-                that could be modified from a DMX control board.
-              </p>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout>
+    <v-flex ml-4 mr-4 lg10 md12 sm12>
+      <v-timeline>
+        <v-timeline-item v-for="(item, i) in portfolio_items" :key="i" color="red lighten-2" small>
+          <template v-slot:opposite>
+            <span>{{ item.date }}</span>
+          </template>
+          <v-card>
+            <v-img :src="item.img" class="white--text" height="200px"></v-img>
+            <v-card-title>
+              <div>
+                <span class="grey--text">{{ item.title }}</span>
+                <h6>{{ item.role }}</h6>
+                <p v-html="item.desc"></p>
+              </div>
+            </v-card-title>
+          </v-card>
+        </v-timeline-item>
+      </v-timeline>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
 export default {
   data: () => ({
-    no_image: "./img/portfolio/no-image.png",
-    sf_fishing: "./img/portfolio/fishing.jpg",
-    sap_cube: "./img/portfolio/sap-cube.png",
-    thermosphere: "./img/portfolio/thermosphere.jpg",
-    block_busters: "./img/portfolio/block-busters.gif"
+    portfolio_items: [
+      {
+        img: "./img/portfolio/block-busters.gif",
+        title: "Block Busters",
+        role: "Support Developer",
+        date: "2019",
+        desc:
+          "5 person, VR, asymmetrical, driving, territory control game. With so many buzz words, you'd think we were making this one up, but it in fact exists and you can actually download it on the <a href='https://globalgamejam.org/2019/games/blockbusters'>GGJ website.</a>"
+      },
+      {
+        img: "./img/portfolio/fishing.jpg",
+        title: "State Farm Fishing",
+        role: "Lead Developer",
+        date: "2019",
+        desc:
+          "Developed a multiplayer fishing experience where guests could use phones mounted to a fishing poles to control the on-screen fishing poles. Scores were saved to a daily leaderboard so guests could compete to be the best virtual fisher."
+      },
+      {
+        img: "./img/portfolio/splunk.jpg",
+        title: "Splunk",
+        role: "Lead Developer",
+        date: "2018",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/",
+        title: "Meyer's Sound",
+        role: "Lead Developer",
+        date: "2018",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/",
+        title: "HIMSS Conference",
+        role: "Lead Developer",
+        date: "2018",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/sap-cube.png",
+        title: "SAP Cube",
+        role: "Lead Developer",
+        date: "2017",
+        desc:
+          "Developed a 52 screen interactive 'cube' for SAP that allowed guests to search through the history of the 49ers with video clips and images from the entire history of the franchise. 16 of the screens were translucent, allowing guests to see into the cube and the 4 internal screens."
+      },
+      {
+        img: "./img/portfolio/",
+        title: "Virtual Board",
+        role: "Lead Developer",
+        date: "2017",
+        desc:
+          "VR hoverboarding game developed for internal use and exploration. Utilized a physical board that allowed the player to control the virtual hoverboard with a real world item. Networking components and the gyroscopic portion of the project was not developed by Pixel-Cur.io."
+      },
+      {
+        img: "./img/portfolio/",
+        title: "State Farm AR Wall",
+        role: "Lead Developer",
+        date: "2017",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/",
+        title: "Golden State Warriors Fan Cam",
+        role: "Support Developer",
+        date: "2016",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/thermosphere.jpg",
+        title: "Nike Thermasphere",
+        role: "Support Developer",
+        date: "2015",
+        desc:
+          "Created an arduino based LED control system for Nike's flagship NYC store to celebrate the launch of their Thermasphere clothing tech. Created the lighting patterns for the LEDs and exposed variables for the sequences that could be modified from a DMX control board."
+      },
+      {
+        img: "./img/portfolio/rogue-mechs.mp4",
+        title: "Rogue Mechs",
+        role: "Lead Developer",
+        date: "2015",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/microbiome.jpg",
+        title: "OMSI Human Microbiome",
+        role: "Lead Developer",
+        date: "2015",
+        desc:
+          ""
+      },
+      {
+        img: "./img/portfolio/",
+        title: "Coca-Cola Happy Cycle",
+        role: "Support Developer",
+        date: "2014",
+        desc:
+          ""
+      }
+    ]
   })
 };
 </script>
